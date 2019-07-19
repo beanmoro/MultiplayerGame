@@ -1,0 +1,149 @@
+extends KinematicBody2D
+
+const MAX_JUMPS = 2
+
+var username = ""
+var movement = Vector2(0,0)
+var speed = 50
+var hspd = 0
+var vspd = 0
+var n_jumps = 0
+var is_grounded = false
+var is_jumping = false
+var is_hidden = false
+
+var updateCoins = false
+var updateCheckpoint = false
+
+var local_player = false
+
+var starcoins = 0
+
+onready var camera = get_node("Camera")
+var dead = false
+
+var checkpoint_coords = Vector2(0,0)
+
+const GRAV = 50
+const MAX_VSPEED = 1000
+const JUMP_FORCE = 800
+
+func _ready():
+	add_to_group("PlayersGroup")
+	
+	if is_network_master():
+		checkpoint_coords = position
+		camera.current = true
+		local_player = true
+		$CollisionShape2D.disabled = false
+	else:
+		$CollisionShape2D.disabled = true
+		camera.current = false
+	
+	$HUD/username.text=username
+	print("Se creo el Jugador ", username, "!")
+	
+
+func _physics_process(delta):
+	if is_network_master():
+		process_input()
+		if !dead:
+			process_movement(delta)
+		spike_collision()
+
+	if dead && !is_hidden:
+		$DeadEffect.show()
+		$DeadEffect.emitting = true
+		$Sprite.hide()
+		$CollisionShape2D.disabled = true
+		$HUD.hide()
+		is_hidden = true
+		
+	elif !dead && is_hidden:
+		$DeadEffect.hide()
+		$Sprite.show()
+		$CollisionShape2D.disabled = !local_player
+		$HUD.show()
+		is_hidden = false
+		
+	if updateCoins && is_network_master():
+		rpc("update_coins", starcoins)
+		updateCoins = false
+	
+	if updateCheckpoint && is_network_master():
+		rpc("update_checkpoint", checkpoint_coords)
+		updateCheckpoint = false
+
+
+func process_input():
+	if Input.is_action_pressed("ui_left") && abs(hspd) < 10:
+		hspd -= 1
+	elif Input.is_action_pressed("ui_right") && abs(hspd) < 10:
+		hspd += 1
+	elif abs(hspd) > 0.1:
+		hspd *=0.60
+	else:
+		hspd = 0
+	
+	if Input.is_action_just_pressed("ui_up") && n_jumps > 0: #jump
+		vspd = -JUMP_FORCE
+		n_jumps-=1
+		is_jumping = true
+		
+	if is_on_ceiling() && vspd < 0:
+		vspd = 0
+	
+	if dead && Input.is_key_pressed(KEY_R):
+		respawn()
+
+func spike_collision():
+	var tilemap = get_tree().get_root().get_node("World").get_node("TileMap")
+	var tile_pos = tilemap.world_to_map(position)
+	var cell = tilemap.get_cellv(tile_pos)
+	
+	if cell == 3 && !dead:
+		kill()
+
+func respawn():
+	dead = false
+	
+	position = checkpoint_coords
+	rpc("update_dead", dead)
+
+func kill():
+	dead = true
+	
+	rpc("update_dead", dead)
+
+func process_movement(delta):
+	
+	is_grounded = is_on_floor()
+	
+	if !is_grounded:
+		if vspd <= MAX_VSPEED:
+			vspd += GRAV
+		else:
+			vspd = MAX_VSPEED
+	elif is_grounded && !Input.is_action_just_pressed("ui_up"): #jump
+		vspd = 0
+		n_jumps = MAX_JUMPS
+	
+	if is_jumping && vspd >= 0:
+		is_jumping = false
+	
+	var snap = Vector2.DOWN * 32 if !is_jumping else Vector2.ZERO
+	move_and_slide_with_snap( Vector2(hspd * speed, vspd) , snap, Vector2(0, -1))
+	rpc_unreliable("update_position", position, delta)
+
+puppet func update_position(pos, delta):
+	self.position = self.position.linear_interpolate(pos, delta * speed) # A mejorar
+puppet func update_dead(state):
+	dead = state
+
+puppet func update_coins(coins):
+	if starcoins < coins:
+		starcoins = coins
+
+puppet func update_checkpoint(coords):
+	checkpoint_coords = coords
+

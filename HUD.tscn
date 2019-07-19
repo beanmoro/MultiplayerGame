@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -72.0
+margin_right = -994.0
+margin_bottom = -544.0
+
+[node name="username" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -32.0
+margin_top = 8.0
+margin_right = 32.0
+margin_bottom = 22.0
+grow_horizontal = 2
+text = "username"
+align = 1
+valign = 1

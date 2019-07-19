@@ -1,0 +1,43 @@
+extends Node2D
+
+export var is_disabled = false
+export var blocked = false
+onready var textnode = $Text
+onready var collisionbox = $StaticBody2D/CollisionShape2D
+
+export var text = ""
+export(NodePath) onready var connected_to
+export(NodePath) onready var brother_of
+
+func _ready():
+	textnode.text = text
+
+func _process(delta):
+	
+	if has_node(brother_of):
+		var brother = get_node(brother_of)
+		if is_disabled != brother.is_disabled:
+			update_state(brother.is_disabled)
+	
+	if is_disabled && $Sprite.frame != 1:
+		$Sprite.frame = 1
+		textnode.add_color_override("font_color", Color(80, 80, 80))
+		collisionbox.disabled = true
+	elif !is_disabled && $Sprite.frame != 0 :
+		$Sprite.frame = 0
+		textnode.add_color_override("font_color", Color(255, 255, 255))
+		collisionbox.disabled = false
+
+func _on_EventCollision_body_entered(body):
+	if body.is_in_group("PlayersGroup") && body.local_player && !is_disabled && !blocked && !collisionbox.disabled:
+		update_state(true)
+		if has_node(connected_to):
+			var connected_node = get_node(connected_to)
+			connected_node.update_state(false)
+
+remote func activate_box(boolean):
+	is_disabled = boolean
+
+func update_state(boolean):
+	is_disabled = boolean
+	rpc("activate_box", boolean)

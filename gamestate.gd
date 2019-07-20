@@ -1,6 +1,6 @@
 extends Node
 
-const server_port = 27016
+const server_port = 25565
 const max_players = 10
 
 var player_name = ""

@@ -1,7 +1,7 @@
 extends Control
 
 var ip = "127.0.0.1"
-var port = "27015"
+var port = "25565"
 var username = "UnnamedPlayer"
 var maxplayers = "5"
 

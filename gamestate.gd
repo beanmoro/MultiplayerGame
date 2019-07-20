@@ -2,7 +2,7 @@ extends Node
 
 const server_port = 25565
 const max_players = 10
-
+# probando el git
 var player_name = ""
 var players = {}
 

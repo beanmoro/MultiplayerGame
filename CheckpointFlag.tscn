@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://CheckpointFlag.gd" type="Script" id=1]
 [ext_resource path="res://checkpoint_flag.png" type="Texture" id=2]
+[ext_resource path="res://8bitOperatorPlus-Bold.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.94925, 14.8152 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 3 )
 
 [node name="CheckpointFlag" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,4 +23,15 @@ position = Vector2( -4, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="Text" type="Label" parent="."]
+visible = false
+margin_left = -23.6859
+margin_top = -30.4975
+margin_right = 16.3141
+margin_bottom = -15.4975
+custom_fonts/font = SubResource( 2 )
+text = "Saved"
+align = 1
+valign = 1
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

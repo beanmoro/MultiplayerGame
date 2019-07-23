@@ -11,6 +11,9 @@ var n_jumps = 0
 var is_grounded = false
 var is_jumping = false
 var is_hidden = false
+export(Color) var player_color = Color(1, 1, 1)
+
+var keyring = []
 
 var updateCoins = false
 var updateCheckpoint = false
@@ -31,16 +34,19 @@ const JUMP_FORCE = 800
 func _ready():
 	add_to_group("PlayersGroup")
 	
+	
 	if is_network_master():
 		checkpoint_coords = position
 		camera.current = true
 		local_player = true
 		$CollisionShape2D.disabled = false
+		#rset("player_color", player_color)
 	else:
 		$CollisionShape2D.disabled = true
 		camera.current = false
 	
 	$HUD/username.text=username
+	$Sprite.modulate = player_color
 	print("Se creo el Jugador ", username, "!")
 	
 
@@ -78,17 +84,27 @@ func _physics_process(delta):
 func process_input():
 	if Input.is_action_pressed("ui_left") && abs(hspd) < 10:
 		hspd -= 1
+		$Sprite.play()
+		$Sprite.animation = "default"
+		$Sprite.flip_h = true
 	elif Input.is_action_pressed("ui_right") && abs(hspd) < 10:
 		hspd += 1
+		$Sprite.play()
+		$Sprite.animation = "default"
+		$Sprite.flip_h = false
 	elif abs(hspd) > 0.1:
 		hspd *=0.60
 	else:
 		hspd = 0
+		$Sprite.stop()
+		$Sprite.animation = "idle"
+		
 	
 	if Input.is_action_just_pressed("ui_up") && n_jumps > 0: #jump
 		vspd = -JUMP_FORCE
 		n_jumps-=1
 		is_jumping = true
+		$Sprite.animation = "jump"
 		
 	if is_on_ceiling() && vspd < 0:
 		vspd = 0
@@ -120,6 +136,7 @@ func process_movement(delta):
 	is_grounded = is_on_floor()
 	
 	if !is_grounded:
+		$Sprite.animation = "jump"
 		if vspd <= MAX_VSPEED:
 			vspd += GRAV
 		else:
@@ -134,6 +151,7 @@ func process_movement(delta):
 	var snap = Vector2.DOWN * 32 if !is_jumping else Vector2.ZERO
 	move_and_slide_with_snap( Vector2(hspd * speed, vspd) , snap, Vector2(0, -1))
 	rpc_unreliable("update_position", position, delta)
+	rpc_unreliable("update_frame", $Sprite.animation, $Sprite.playing, $Sprite.flip_h)
 
 puppet func update_position(pos, delta):
 	self.position = self.position.linear_interpolate(pos, delta * speed) # A mejorar
@@ -147,3 +165,18 @@ puppet func update_coins(coins):
 puppet func update_checkpoint(coords):
 	checkpoint_coords = coords
 
+remote func add_key(key):
+	keyring.push_back(key)
+
+remote func delete_key(key):
+	keyring.erase(key)
+	
+puppet func update_frame(anim, playing, flip):
+	$Sprite.animation = anim
+	$Sprite.flip_h = flip
+	if playing:
+		$Sprite.play()
+	else:
+		$Sprite.stop()
+	
+	

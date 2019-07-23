@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://MovingPlatform.gd" type="Script" id=1]
-[ext_resource path="res://floating_platform.png" type="Texture" id=2]
+[ext_resource path="res://movingplatform.png" type="Texture" id=2]
 
 [node name="MovingPlatform" type="Node2D"]
 z_index = -2
@@ -13,7 +13,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform"]
-polygon = PoolVector2Array( -48, -14, 48, -14, 48, 0, 32, 16, -32, 16, -48, 0 )
+polygon = PoolVector2Array( -48, -17, 48, -17, 48, -13, 45, -9, 45, 10, 40, 15, -40, 15, -45, 10, -45, -9, -48, -13 )
 
 [node name="MoveTween" type="Tween" parent="."]
 repeat = true

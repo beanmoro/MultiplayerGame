@@ -7,6 +7,8 @@ const max_players = 5
 
 var player_name = ""
 var players = {}
+var player_color = Color(1, 1, 1)
+var player_data = { name = "", color = Color(1,1,1)}
 
 func _player_connected(id):
 	print("Se esta conectando Jugador ", str(id))
@@ -17,9 +19,9 @@ func _player_disconnected(id):
 
 func _connected_ok():
 	var unique_id = get_tree().get_network_unique_id()
-	rpc("register_player", unique_id, player_name)
+	rpc("register_player", unique_id, player_name, player_color)
 	start_game()
-	register_player(unique_id, player_name)
+	register_player(unique_id, player_name, player_color)
 	
 func _connected_fail():
 	get_tree().set_network_peer(null)
@@ -33,41 +35,50 @@ func _server_disconnected():
 	get_tree().get_root().get_node("World").hide()	
 	print("El servidor se ha desconectado!")
 
-remote func register_player(id, new_player_name):
+remote func register_player(id, new_player_name, color):
 	if get_tree().is_network_server():
-		rpc_id(id, "register_player", 1, player_name)
+		rpc_id(id, "register_player", 1, player_name, player_color)
 		for p_id in players:
-			rpc_id(id, "register_player", p_id, players[p_id])
-			rpc_id(p_id, "register_player", id, new_player_name)
-	players[id] = new_player_name
-	spawn_player(id, players[id])
+			rpc_id(id, "register_player", p_id, players[id].name, players[id].color)
+			rpc_id(p_id, "register_player", id, new_player_name, color)
+	player_data.name = new_player_name
+	player_data.color = color
+	players[id] = player_data
+	spawn_player(id, players[id].name, players[id].color)
 	print("Jugador ", str(players[id]), " conectado!")
 
 remote func unregister_player(id):
 	get_tree().get_root().get_node("World").get_node("Players").get_node(str(id)).free()
 	players.erase(id)
 
-func host_game(new_player_name):
+func host_game(new_player_name, color):
 	print("Creando Servidor...")
+	player_data.name = new_player_name
+	player_data.color = color
 	player_name = new_player_name
+	#player_color = color
 	var host = NetworkedMultiplayerENet.new()
 	host.create_server(server_port, max_players)
 	get_tree().set_network_peer(host)
 	print("Servidor Creado e Iniciado!")
 	start_game()
-	spawn_player(1, player_name)
+	spawn_player(1, player_name, player_color)
 
-func join_game(ip, new_player_name):
+func join_game(ip, new_player_name, color):
 	print("Conectando a servidor...")
+	player_data.name = new_player_name
+	player_data.color = color
 	player_name = new_player_name
+	#player_color = color
 	var host = NetworkedMultiplayerENet.new()
 	host.create_client(ip, server_port)
 	get_tree().set_network_peer(host)
 
-func spawn_player(id, username):
+func spawn_player(id, username, color):
 	var player = load("res://Player.tscn").instance()
 	player.set_network_master(id)
 	player.set_name(str(id))
+	player.player_color = color
 	player.username = username
 	player.position = Vector2(randi()%200+100, 100)
 	get_tree().get_root().get_node("World").get_node("Players").add_child(player)

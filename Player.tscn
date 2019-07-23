@@ -1,11 +1,43 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://eyeblock_char.png" type="Texture" id=2]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ball_character_anim/ball_character_anim0000.png" type="Texture" id=3]
+[ext_resource path="res://ball_character_anim/ball_character_anim0001.png" type="Texture" id=4]
+[ext_resource path="res://ball_character_anim/ball_character_anim0002.png" type="Texture" id=5]
+[ext_resource path="res://ball_character_anim/ball_character_anim0003.png" type="Texture" id=6]
+[ext_resource path="res://ball_character_anim/ball_character_anim0004.png" type="Texture" id=7]
+[ext_resource path="res://ball_character_anim/ball_character_anim0005.png" type="Texture" id=8]
+[ext_resource path="res://ball_character_anim/ball_character_anim0006.png" type="Texture" id=9]
+[ext_resource path="res://ball_character_anim/ball_character_anim0007.png" type="Texture" id=10]
+[ext_resource path="res://ball_character_anim/ball_character_anim0008.png" type="Texture" id=11]
+[ext_resource path="res://ball_character_anim/ball_character_anim0009.png" type="Texture" id=12]
+[ext_resource path="res://ball_character_anim/ball_character_anim0010.png" type="Texture" id=13]
+[ext_resource path="res://ball_character_anim/ball_character_anim0011.png" type="Texture" id=14]
+[ext_resource path="res://ball_character_idle.png" type="Texture" id=15]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=16]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.0267, 14.9203 )
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 17.1024
+height = 8.71811
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0.0041841, 1 )
@@ -41,19 +73,29 @@ color_ramp = SubResource( 3 )
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite_" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+animation = "idle"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 0, -3 )
+shape = SubResource( 6 )
 
 [node name="Camera" type="Camera2D" parent="."]
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
 drag_margin_left = 0.0
 drag_margin_top = 0.5
 drag_margin_right = 0.0
 drag_margin_bottom = 0.5
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
+[node name="HUD" parent="." instance=ExtResource( 16 )]
 margin_left = -0.354706
 margin_top = -51.4732
 margin_right = -0.354706

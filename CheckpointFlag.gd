@@ -11,8 +11,10 @@ func _process(delta):
 	
 	if is_activated && $Sprite.frame != 1:
 		$Sprite.frame = 1
+		$Text.show()
 	elif !is_activated && $Sprite.frame != 0:
 		$Sprite.frame = 0
+		$Text.hide()
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("PlayersGroup") && body.local_player && !is_activated:

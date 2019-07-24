@@ -1,11 +1,10 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://tileset_multiplayergame.png" type="Texture" id=1]
 [ext_resource path="res://tileSet_soldiblock.png" type="Texture" id=2]
 [ext_resource path="res://CheckpointFlag.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SurpriseBlock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://StarCoin.tscn" type="PackedScene" id=5]
-[ext_resource path="res://MovingPlatform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MovingPlatform.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1133,73 +1132,63 @@ myColor = Color( 1, 0.509804, 0, 1 )
 text = "T"
 connected_to = NodePath("../SurpriseBlock")
 
-[node name="starcoins" type="Node2D" parent="."]
-
-[node name="StarCoin13" parent="starcoins" instance=ExtResource( 5 )]
-position = Vector2( 1392, 96 )
-
-[node name="StarCoin15" parent="starcoins" instance=ExtResource( 5 )]
-position = Vector2( 1776, 104 )
-
-[node name="starcoins2" type="Node2D" parent="."]
-
 [node name="platforms" type="Node2D" parent="."]
 
-[node name="MovingPlatform2" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform2" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 176, 1488 )
 move_to = Vector2( 704, 0 )
 speed = 7.0
 
-[node name="MovingPlatform12" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform12" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 1036, 1072 )
 move_to = Vector2( -932, 0 )
 speed = 7.0
 
-[node name="MovingPlatform" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 1136, 144 )
 speed = 5.0
 
-[node name="MovingPlatform3" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform3" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 3680, 1264 )
 move_to = Vector2( 0, 1600 )
 speed = 10.0
 
-[node name="MovingPlatform4" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform4" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 3376, 2144 )
 move_to = Vector2( 0, 512 )
 speed = 10.0
 
-[node name="MovingPlatform5" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform5" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 2832, 2496 )
 move_to = Vector2( 416, 0 )
-speed = 20.0
+speed = 30.0
 
-[node name="MovingPlatform7" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform7" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 1712, 2848 )
 move_to = Vector2( 512, 0 )
 speed = 30.0
 
-[node name="MovingPlatform9" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform9" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 349.488, 3030.84 )
 move_to = Vector2( 768, 0 )
 speed = 10.0
 
-[node name="MovingPlatform11" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform11" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 349.488, 2944 )
 move_to = Vector2( 736, 0 )
 speed = 30.0
 
-[node name="MovingPlatform10" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform10" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 1059.2, 2992 )
 move_to = Vector2( -768, 0 )
 speed = 20.0
 
-[node name="MovingPlatform13" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform13" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 1056, 2896 )
 move_to = Vector2( -768, 0 )
 speed = 40.0
 
-[node name="MovingPlatform6" parent="platforms" instance=ExtResource( 6 )]
+[node name="MovingPlatform6" parent="platforms" instance=ExtResource( 5 )]
 position = Vector2( 2480, 2396 )
 move_to = Vector2( 0, 512 )
 speed = 10.0

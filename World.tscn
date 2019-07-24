@@ -545,344 +545,608 @@ saved_coord = Vector2( 240, 3000 )
 
 [node name="SurpriseBlock2" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 48, 784 )
+is_disabled = null
+blocked = null
 myColor = Color( 1, 0.796078, 0, 1 )
 text = "A"
 connected_to = NodePath("../SurpriseBlock1")
+brother_of = null
 
 [node name="SurpriseBlock2_0" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, 112 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_1" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, 80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_2" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, 48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_3" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, 16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_4" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_5" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_6" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_7" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -112 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_8" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -144 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_9" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -176 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_10" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -208 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_11" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -240 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_12" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -272 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_13" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_14" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -336 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_15" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -368 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_16" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, -400 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_17" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_18" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2096, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_19" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2320, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_43" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2480, 1936 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_44" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2480, 1904 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_45" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2480, 1872 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_46" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2480, 1840 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_40" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2288, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_41" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2128, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_39" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2256, 784 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_20" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 816 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_21" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2096, 816 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_22" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2128, 816 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_23" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 849 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_24" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2096, 848 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_25" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2128, 848 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_26" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 880 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_27" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 912 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_28" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 944 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_29" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2064, 976 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_30" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2032, 976 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_31" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2032, 944 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_32" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2032, 912 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_33" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2000, 944 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_34" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2000, 976 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_35" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 976 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_36" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 944 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_37" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 912 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock2_38" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 2000, 912 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "A"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock2")
 
 [node name="SurpriseBlock1" parent="surpriseblocks/A Group" instance=ExtResource( 4 )]
 position = Vector2( 1856, 144 )
 is_disabled = true
+blocked = null
 myColor = Color( 1, 0.796078, 0, 1 )
 text = "A"
 connected_to = NodePath("../SurpriseBlock2")
+brother_of = null
 
 [node name="B Group" type="Node2D" parent="surpriseblocks"]
 
 [node name="SurpriseBlock3" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, 113 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock5")
 
 [node name="SurpriseBlock3_1" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, 80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_2" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, 48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_3" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, 16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_4" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_5" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_6" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_7" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -112 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_8" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -144 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_9" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -176 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_10" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -208 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_11" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -240 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_12" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -272 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_13" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_14" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -336 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_15" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -368 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_16" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -400 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock3_17" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 3152, -432 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "B"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock3")
 
 [node name="SurpriseBlock5" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 2960, 1200 )
+is_disabled = null
+blocked = null
 myColor = Color( 0, 1, 0, 1 )
 text = "B"
 connected_to = NodePath("../SurpriseBlock6")
+brother_of = null
 
 [node name="SurpriseBlock6" parent="surpriseblocks/B Group" instance=ExtResource( 4 )]
 position = Vector2( 2704, 1936 )
@@ -891,47 +1155,63 @@ blocked = true
 myColor = Color( 0, 1, 0, 1 )
 text = "B"
 connected_to = NodePath("../SurpriseBlock5")
+brother_of = null
 
 [node name="C Group" type="Node2D" parent="surpriseblocks"]
 
 [node name="SurpriseBlock6" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 1424, 2832 )
 is_disabled = true
+blocked = null
 myColor = Color( 1, 0, 0.607843, 1 )
 text = "C"
 connected_to = NodePath("../SurpriseBlock7")
+brother_of = null
 
 [node name="SurpriseBlock7" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 144, 2896 )
+is_disabled = null
+blocked = null
 myColor = Color( 1, 0, 0.607843, 1 )
 text = "C"
 connected_to = NodePath("../SurpriseBlock6")
+brother_of = null
 
 [node name="SurpriseBlock8" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 1616, 2656 )
 is_disabled = true
 blocked = true
+myColor = null
 text = "D"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock10")
 
 [node name="SurpriseBlock9" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 48, 2720 )
+is_disabled = null
+blocked = null
 myColor = Color( 0, 0.764706, 1, 1 )
 text = "D"
 connected_to = NodePath("../SurpriseBlock10")
+brother_of = null
 
 [node name="SurpriseBlock10" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 3824, 2944 )
 is_disabled = true
+blocked = null
 myColor = Color( 0, 0.764706, 1, 1 )
 text = "D"
 connected_to = NodePath("../SurpriseBlock9")
+brother_of = null
 
 [node name="SurpriseBlock11" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 48, 1616 )
+is_disabled = null
+blocked = null
 myColor = Color( 0.568627, 0, 1, 1 )
 text = "F"
 connected_to = NodePath("../SurpriseBlock13")
+brother_of = null
 
 [node name="SurpriseBlock13" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 2736, 1936 )
@@ -940,197 +1220,342 @@ blocked = true
 myColor = Color( 0.568627, 0, 1, 1 )
 text = "F"
 connected_to = NodePath("../SurpriseBlock11")
+brother_of = null
 
 [node name="SurpriseBlock12" parent="surpriseblocks/C Group" instance=ExtResource( 4 )]
 position = Vector2( 1840, 2384 )
+is_disabled = null
+blocked = null
 myColor = Color( 0.568627, 0, 1, 1 )
 text = "F"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock11")
 
 [node name="D Group" type="Node2D" parent="surpriseblocks"]
 
 [node name="SurpriseBlock" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 112, -356 )
+is_disabled = null
+blocked = null
 myColor = Color( 1, 0.509804, 0, 1 )
 text = "T"
 connected_to = NodePath("../SurpriseBlock3")
+brother_of = null
 
 [node name="SurpriseBlock2_0" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_1" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_9" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_10" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -16 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_11" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -48 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_12" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -80 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_13" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -112 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_14" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -144 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_15" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -176 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_16" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -208 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_17" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -240 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_18" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -272 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_19" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_20" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -336 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_21" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -368 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_22" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, -400 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_23" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 2512, 304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_27" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2000 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_28" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2032 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_29" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2064 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_30" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2096 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_31" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2128 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_32" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2161 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_33" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2192 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_34" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1968, 2224 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_24" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 2544, 304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_25" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 2576, 304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_26" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 2608, 304 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_2" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 112 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_3" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 144 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_4" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 176 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_5" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 208 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_6" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 240 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock2_7" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 400, 272 )
+is_disabled = null
+blocked = null
+myColor = null
 text = "T"
+connected_to = null
 brother_of = NodePath("../SurpriseBlock")
 
 [node name="SurpriseBlock3" parent="surpriseblocks/D Group" instance=ExtResource( 4 )]
 position = Vector2( 1264, 672 )
 is_disabled = true
+blocked = null
 myColor = Color( 1, 0.509804, 0, 1 )
 text = "T"
 connected_to = NodePath("../SurpriseBlock")
+brother_of = null
 
 [node name="platforms" type="Node2D" parent="."]
 

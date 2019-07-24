@@ -13,11 +13,16 @@ export(NodePath) onready var brother_of
 func _ready():
 	textnode.text = text
 	
-	if has_node(brother_of):
-		var brother = get_node(brother_of)
-		if myColor != brother.myColor:
-			myColor = brother.myColor
-	$Sprite.modulate = myColor
+	if !get_tree().is_network_server():
+		rpc_id(1, "request_state", get_tree().get_network_unique_id())
+
+	
+	#if has_node(brother_of):
+	#	var brother = get_node(brother_of)
+	#	if myColor != brother.myColor:
+	#		myColor = brother.myColor
+	#$Sprite.modulate = myColor
+
 
 func _process(delta):
 	
@@ -50,3 +55,6 @@ remote func activate_box(boolean):
 func update_state(boolean):
 	is_disabled = boolean
 	rpc("activate_box", boolean)
+	
+remote func request_state(id):
+	rpc_id(id, "activate_box", is_disabled)

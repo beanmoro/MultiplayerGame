@@ -1,8 +1,10 @@
-extends Particles2D
-#Comentario para github
-#La Weaita
-# comentario pirulle
+extends Node2D
+
+onready var particles = $Particles2D
 
 func _ready():
-	yield(get_tree().create_timer(2.0), "timeout")
+	particles.emitting = true
+	yield(get_tree().create_timer(0.5), "timeout")
 	queue_free()
+	
+	

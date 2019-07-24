@@ -1,10 +1,19 @@
 extends Node
 
 const server_port = 25565
+<<<<<<< Updated upstream
 const max_players = 10
 
 var player_name = ""
 var players = {}
+=======
+
+const max_players = 5
+var player_name = ""
+var players = {}
+#var player_color = Color(1, 1, 1)
+var player_data = { name = '', color = Color(1,1,1)}
+>>>>>>> Stashed changes
 
 func _player_connected(id):
 	print("Se esta conectando Jugador ", str(id))
@@ -15,9 +24,15 @@ func _player_disconnected(id):
 
 func _connected_ok():
 	var unique_id = get_tree().get_network_unique_id()
+<<<<<<< Updated upstream
 	rpc("register_player", unique_id, player_name)
 	start_game()
 	register_player(unique_id, player_name)
+=======
+	rpc("register_player", unique_id, player_data)
+	start_game()
+	register_player(unique_id, player_data)
+>>>>>>> Stashed changes
 	
 func _connected_fail():
 	get_tree().set_network_peer(null)
@@ -28,9 +43,10 @@ func _server_disconnected():
 		get_tree().get_root().get_node("World").get_node("Players").get_node(str(p_id)).free()
 	players.clear()
 	get_tree().get_root().get_node("Lobby").show()
-	get_tree().get_root().get_node("World").hide()	
+	get_tree().get_root().get_node("World").hide()
 	print("El servidor se ha desconectado!")
 
+<<<<<<< Updated upstream
 remote func register_player(id, new_player_name):
 	if get_tree().is_network_server():
 		rpc_id(id, "register_player", 1, player_name)
@@ -40,6 +56,17 @@ remote func register_player(id, new_player_name):
 	players[id] = new_player_name
 	spawn_player(id, players[id])
 	print("Jugador ", str(players[id]), " conectado!")
+=======
+remote func register_player(id, new_player_data):
+	if get_tree().is_network_server():
+		rpc_id(id, "register_player", 1, player_data)
+		for p_id in players:
+			rpc_id(id, "register_player", p_id, players[p_id])
+			rpc_id(p_id, "register_player", id, new_player_data)
+	players[id] = { name = new_player_data.name, color = new_player_data.color}
+	spawn_player(id, players[id].name, players[id].color)
+	print("Jugador ", str(players[id].name), " registrado!")
+>>>>>>> Stashed changes
 
 remote func unregister_player(id):
 	get_tree().get_root().get_node("World").get_node("Players").get_node(str(id)).free()
@@ -53,7 +80,11 @@ func host_game(new_player_name):
 	get_tree().set_network_peer(host)
 	print("Servidor Creado e Iniciado!")
 	start_game()
+<<<<<<< Updated upstream
 	spawn_player(1, player_name)
+=======
+	spawn_player(1, player_data.name, player_data.color)
+>>>>>>> Stashed changes
 
 func join_game(ip, new_player_name):
 	print("Conectando a servidor...")

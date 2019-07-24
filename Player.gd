@@ -11,6 +11,14 @@ var n_jumps = 0
 var is_grounded = false
 var is_jumping = false
 var is_hidden = false
+<<<<<<< Updated upstream
+=======
+
+
+export(Color) var player_color = Color(1, 1, 1)
+
+var keyring = []
+>>>>>>> Stashed changes
 
 var updateCoins = false
 var updateCheckpoint = false
@@ -20,9 +28,16 @@ var local_player = false
 var starcoins = 0
 
 onready var camera = get_node("Camera")
+
 var dead = false
 
 var checkpoint_coords = Vector2(0,0)
+
+var bLeft
+var bUp
+var bRight
+var bDown
+var bDash
 
 const GRAV = 50
 const MAX_VSPEED = 1000
@@ -52,15 +67,13 @@ func _physics_process(delta):
 		spike_collision()
 
 	if dead && !is_hidden:
-		$DeadEffect.show()
-		$DeadEffect.emitting = true
 		$Sprite.hide()
 		$CollisionShape2D.disabled = true
 		$HUD.hide()
+		bloodparticle_effect(position)
 		is_hidden = true
 		
 	elif !dead && is_hidden:
-		$DeadEffect.hide()
 		$Sprite.show()
 		$CollisionShape2D.disabled = !local_player
 		$HUD.show()
@@ -76,16 +89,34 @@ func _physics_process(delta):
 
 
 func process_input():
-	if Input.is_action_pressed("ui_left") && abs(hspd) < 10:
+	
+	bLeft = Input.is_action_pressed("ui_left") 
+	bUp = Input.is_action_just_pressed("ui_up")
+	bRight = Input.is_action_pressed("ui_right")
+	
+	if bLeft && abs(hspd) < 10:
 		hspd -= 1
+<<<<<<< Updated upstream
 	elif Input.is_action_pressed("ui_right") && abs(hspd) < 10:
+=======
+		$Sprite.play()
+		$Sprite.animation = "default"
+		$Sprite.flip_h = true
+	elif bRight && abs(hspd) < 10:
+>>>>>>> Stashed changes
 		hspd += 1
 	elif abs(hspd) > 0.1:
 		hspd *=0.60
 	else:
 		hspd = 0
+<<<<<<< Updated upstream
+=======
+		$Sprite.stop()
+		$Sprite.animation = "idle"
+>>>>>>> Stashed changes
 	
-	if Input.is_action_just_pressed("ui_up") && n_jumps > 0: #jump
+		
+	if bUp && n_jumps > 0: #jump
 		vspd = -JUMP_FORCE
 		n_jumps-=1
 		is_jumping = true
@@ -124,7 +155,7 @@ func process_movement(delta):
 			vspd += GRAV
 		else:
 			vspd = MAX_VSPEED
-	elif is_grounded && !Input.is_action_just_pressed("ui_up"): #jump
+	elif is_grounded && !bUp: #jump
 		vspd = 0
 		n_jumps = MAX_JUMPS
 	
@@ -147,3 +178,24 @@ puppet func update_coins(coins):
 puppet func update_checkpoint(coords):
 	checkpoint_coords = coords
 
+<<<<<<< Updated upstream
+=======
+remote func add_key(key):
+	keyring.push_back(key)
+
+remote func delete_key(key):
+	keyring.erase(key)
+	
+puppet func update_frame(anim, playing, flip):
+	$Sprite.animation = anim
+	$Sprite.flip_h = flip
+	if playing:
+		$Sprite.play()
+	else:
+		$Sprite.stop()
+
+func bloodparticle_effect(_position):
+	var effect = load("res://BloodEffect.tscn").instance()
+	add_child(effect)
+	
+>>>>>>> Stashed changes

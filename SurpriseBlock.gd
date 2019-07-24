@@ -17,11 +17,11 @@ func _ready():
 		rpc_id(1, "request_state", get_tree().get_network_unique_id())
 
 	
-	#if has_node(brother_of):
-	#	var brother = get_node(brother_of)
-	#	if myColor != brother.myColor:
-	#		myColor = brother.myColor
-	#$Sprite.modulate = myColor
+	if has_node(brother_of):
+		var brother = get_node(brother_of)
+		if myColor != brother.myColor:
+			myColor = brother.myColor
+	$Sprite.modulate = myColor
 
 
 func _process(delta):
